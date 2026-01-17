@@ -1,4 +1,16 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse("VESUM Homepage")
+    return render(request, "home.html")
+
+def about(request):
+    return render(request, "about.html")
+
+def services(request):
+    return render(request, "services.html")
+
+def contact(request):
+    return render(request, "contact.html")
+
+def robots_txt(request):
+    return render(request, "robots.txt", content_type="text/plain")
